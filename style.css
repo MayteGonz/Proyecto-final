@@ -85,3 +85,150 @@ nav {
     box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
   }
 }
+
+.carrousel {
+  padding: 0;
+  margin: 0;
+  color: white;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+}
+
+#container {
+  height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#galleryContainer {
+  height: 500px;
+  width: 800px;
+  background: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+}
+
+#galleryView {
+  height: 100vh;
+  width: 100vw;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#slider3 {
+  height: 36px;
+  width: 46px;
+  background-color: rgb(0, 204, 255);
+  border-radius: 3px;
+  transition: all 0.5s;
+}
+
+#slider3.active {
+  -webkit-transform: translatex(50px);
+  -ms-transform: translatex(50px);
+  -o-transform: translatex(50px);
+  transform: translatex(50px);
+  transition: all 0.5s;
+  background-color: rgb(0, 60, 255);
+}
+
+#mainView {
+  height: 450px;
+  width: 450px;
+  border-radius: 5px;
+  background-color: #00bceb;
+  margin-left: 10px;
+  margin-right: 10px;
+  z-index: 1;
+  transition: all 1s;
+}
+
+#mainView:hover {
+  transform: scale(1.2);
+  transition: all 1s;
+}
+
+#leftView {
+  height: 400px;
+  width: 150px;
+  opacity: 0.5;
+  border-radius: 5px;
+  transform: skewy(5deg);
+  transform-origin: top right;
+  background-color: #00bceb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s;
+}
+
+#leftView:hover {
+  opacity: 1;
+  transition: all 1s;
+}
+
+#rightView {
+  height: 400px;
+  width: 150px;
+  opacity: 0.5;
+  border-radius: 5px;
+  transform: skewy(-5deg);
+  transform-origin: top left;
+  background-color: #00bceb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s;
+}
+
+#rightView:hover {
+  opacity: 1;
+  transition: all 1s;
+}
+
+.navBtns {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: none;
+  position: absolute;
+  opacity: 0.8;
+  background-color: transparent;
+  cursor: pointer;
+  color: white;
+}
+
+.navBtns:hover {
+  opacity: 1;
+  transition: all 1s;
+  background-color: #00bceb;
+}
+
+#navLeft {
+  left: 50px;
+}
+
+#navRight {
+  right: 50px;
+}
+
+#linkTag {
+  cursor: pointer;
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+.subrayado {
+  border-bottom: 1px solid rgb(100, 96, 96);
+}
+/* object-fit: cover;
+  align-items: center;
+  width: 450px;
+  height: 100%; */
