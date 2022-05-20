@@ -232,3 +232,11 @@ nav {
   align-items: center;
   width: 450px;
   height: 100%; */
+.prueba {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: flex-start;
+  margin-top: 200px;
+  flex-direction: column;
+}
