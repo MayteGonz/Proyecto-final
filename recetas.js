@@ -37,7 +37,24 @@ function showRecipes(data) {
 
     foto.src = receta.attributes.foto;
     titulo.textContent = receta.attributes.titulo;
-    ingredientes.textContent = receta.attributes.ingredientes.data;
+
+    console.log(receta.attributes.ingredientes.data);
+
+
+    var sumaCantidades = 0;
+    for (var ingredienteKey in receta.attributes.ingredientes.data) {
+
+
+      console.log(receta.attributes.ingredientes.data[ingredienteKey].attributes.nombre);
+      console.log(receta.attributes.ingredientes.data[ingredienteKey].attributes.cantidad);
+      ingredientes.textContent += receta.attributes.ingredientes.data[ingredienteKey].attributes.cantidad;
+      ingredientes.textContent += " - ";
+      ingredientes.textContent += receta.attributes.ingredientes.data[ingredienteKey].attributes.nombre;
+      ingredientes.textContent += " --- ";
+      sumaCantidades += Number(receta.attributes.ingredientes.data[ingredienteKey].attributes.cantidad);
+    }
+    ingredientes.textContent += " [Sumatorio total: ] " + sumaCantidades;
+
     descripcion.textContent = receta.attributes.descripcion;
 
     div.appendChild(foto);
