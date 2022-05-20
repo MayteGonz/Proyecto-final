@@ -240,3 +240,17 @@ nav {
   margin-top: 200px;
   flex-direction: column;
 }
+
+.lista-recetas {
+  margin-top: 200px;
+}
+
+.contenedor {
+  display: flex;
+  flex-wrap: wrap;
+}
+.imagen-receta {
+  float: left;
+  width: 400px;
+  height: auto;
+}
