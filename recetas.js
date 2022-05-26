@@ -29,7 +29,7 @@ function showRecipes(data) {
     const div = document.createElement("div");
     const titulo = document.createElement("h2");
     const foto = document.createElement("img");
-    const ingredientes = document.createElement("p");
+    const ingredientes = document.createElement("ul");
     const descripcion = document.createElement("p");
 
     div.classList.add("contenedor");
@@ -38,24 +38,17 @@ function showRecipes(data) {
     foto.src = receta.attributes.foto;
     titulo.textContent = receta.attributes.titulo;
 
-    console.log(receta.attributes.ingredientes.data);
+    for (var ingrediente of receta.attributes.ingredientes.data) {
+      const ingredienteItem = document.createElement("li");
 
-
-    var sumaCantidades = 0;
-    for (var ingredienteKey in receta.attributes.ingredientes.data) {
-
-
-      console.log(receta.attributes.ingredientes.data[ingredienteKey].attributes.nombre);
-      console.log(receta.attributes.ingredientes.data[ingredienteKey].attributes.cantidad);
-      ingredientes.textContent += receta.attributes.ingredientes.data[ingredienteKey].attributes.cantidad;
-      ingredientes.textContent += " - ";
-      ingredientes.textContent += receta.attributes.ingredientes.data[ingredienteKey].attributes.nombre;
-      ingredientes.textContent += " --- ";
-      sumaCantidades += Number(receta.attributes.ingredientes.data[ingredienteKey].attributes.cantidad);
+      ingredienteItem.innerText += ingrediente.attributes.cantidad + " de";
+      ingredienteItem.innerText += "  ";
+      ingredienteItem.innerText += ingrediente.attributes.nombre;
+      ingredientes.appendChild(ingredienteItem);
     }
-    ingredientes.textContent += " [Sumatorio total: ] " + sumaCantidades;
 
     descripcion.textContent = receta.attributes.descripcion;
+    descripcion.innerHTML = descripcion.innerHTML.replaceAll("\n", "<br/>");
 
     div.appendChild(foto);
     div.appendChild(titulo);
