@@ -41,7 +41,9 @@ function showRecipes(data) {
     for (var ingrediente of receta.attributes.ingredientes.data) {
       const ingredienteItem = document.createElement("li");
 
-      ingredienteItem.innerText += ingrediente.attributes.cantidad + " de";
+      ingredienteItem.innerText += ingrediente.attributes.cantidad;
+      ingredienteItem.innerText += "  ";
+      ingredienteItem.innerText += ingrediente.attributes.Unidades + " de";
       ingredienteItem.innerText += "  ";
       ingredienteItem.innerText += ingrediente.attributes.nombre;
       ingredientes.appendChild(ingredienteItem);
