@@ -9,9 +9,7 @@ requestRecipes();
 
 async function requestRecipes() {
   try {
-    const response = await fetch(
-      "https://proyecto-final-mayte-nuria.herokuapp.com/api/recetas?populate=*"
-    );
+    const response = await fetch(`${url}/recetas?populate=*`);
     if (!response.ok) {
       const message = `Error: ${response.status}`;
       throw new Error(message);

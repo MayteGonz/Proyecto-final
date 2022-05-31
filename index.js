@@ -63,3 +63,13 @@ document.getElementById("leftView").addEventListener("click", scrollLeft);
 document.addEventListener("keyup", function (e) {});
 
 loadGallery();
+
+const borrar = document.getElementById("btRequest2");
+borrar.addEventListener("click", () => {
+  deleteData();
+});
+
+function deleteData() {
+  localStorage.removeItem("jwt");
+  window.location.href = "index.html";
+}
