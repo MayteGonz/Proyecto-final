@@ -1,3 +1,19 @@
+/* nuevo */
+body {
+  font-family: 'Montserrat', sans-serif !important;
+  scroll-behavior: smooth;
+}
+
+* {
+margin: 0;
+padding:0;
+}
+
+footer {
+margin-top: 150px;
+}
+/* nuevo hasta aquí */
+
 nav {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
@@ -255,4 +271,98 @@ nav {
   float: left;
   width: 400px;
   height: auto;
+}
+
+/* nuevo */
+.seccion-dos {
+  background-color:rgb(255, 255, 255);
+}
+
+.seccion-dos h1{
+  color: #3D6FE3;
+  font-weight: 600;
+  font-size: 40px;
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+.w3-twothird h1 {
+  color: #3D6FE3; 
+  font-weight: 600;
+  font-size: 40px;
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+.titulo {
+  font-weight: 600;
+  font-size: 40px;
+  margin:50px 0px;
+  text-align: center;
+  text-transform: uppercase;
+   font-family: 'Montserrat', sans-serif !important;
+}
+
+.utilidades{
+  margin: 0px auto;
+  display: flex;
+  max-width: 1400px;
+  flex-wrap: wrap;
+  align-items: center;
+  /* background-color:	rgba(0, 0, 47,0.3); */
+  justify-content: space-evenly;
+}
+
+.listado-utilidades{
+  margin: 30px;;
+  padding: 20px;
+  width:350px !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border:1px solid gray;
+  background: #3DC2E3;
+  box-shadow: 0 8px 40px 0 rgba(70, 70, 71, 0.37);
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  overflow: visible !important;
+}
+
+.listado-utilidades h3 {
+  color:white;
+  text-align: center;
+}
+
+.listado-utilidades:hover{
+  transform: scale(1.05);
+}
+
+/* Media Queries */
+
+/*medium screens - Laptops*/
+@media screen and (max-width: 1024px) {
+  main{
+      width:100% !important;
+      margin: auto !important;
+  }    
+  
+}
+
+/*Small screens - tablets*/
+@media screen and (max-width: 768px) {
+  
+  .titulo{
+      text-align: center;
+      font-size: 30px;
+  }
+  
+}
+
+/*Extra small screens - phones*/
+@media screen and (max-width: 480px) {
+ 
+  .titulo{
+      text-align: center;
+      font-size: 25px;
+  }
 }
