@@ -15,6 +15,7 @@ async function requestRecipes() {
       throw new Error(message);
     }
     const recipesResponse = await response.json();
+    console.log(recipesResponse.data);
     showRecipes(recipesResponse.data);
   } catch (error) {
     console.log(error);
@@ -23,6 +24,7 @@ async function requestRecipes() {
 
 function showRecipes(data) {
   const listRecipes = document.getElementById("lista-recetas");
+  listRecipes.innerHTML = "";
   for (const receta of data) {
     const div = document.createElement("div");
     const titulo = document.createElement("h2");

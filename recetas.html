@@ -39,13 +39,23 @@
         </div>
     </nav>
     <section class="lista-recetas">
+
+        <!-- https://proyecto-final-mayte-nuria.herokuapp.com/api/recetas?filters[titulo][$containsi]=biz -->
+
+        <form id="buscador">
+            <input type="text" name="cadenadebusqueda" id="cadenadebusqueda">
+            <input type="submit" value="buscar">
+
+        </form>
+
+
         <ul id="lista-recetas">
         </ul>
     </section>
 
     <script src="config.js"></script>
     <script src="recetas.js"></script>
-
+    <script src="buscador.js"></script>
 
 </body>
 
