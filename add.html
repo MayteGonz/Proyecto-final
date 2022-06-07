@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/Images/favicon_whirr.png" type="image/x-icon">
+    <title>Recetas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=font1|font2|etc" type="text/css">
+    <script src="https://kit.fontawesome.com/2c7fc28a2f.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="menu-left">
+            <a href="index.html"><img src="/Images/transparent_whirr_logo.png" alt="Whirr">
+            </a>
+
+        </div>
+        <div class="menu-links">
+            <a href="index.html">Inicio</a>
+            <a href="planificacion.html">Planificación</a>
+            <a class="subrayado" href="recetas.html">Recetas</a>
+            <a href="lista-compra.html">Lista de la compra</a>
+
+
+        </div>
+
+        <div class="log-in">
+
+            <a href="login.html">Entrar</a>
+            <button onclick="location.href='registrarse.html'">Registrarse</button>
+
+        </div>
+    </nav>
+    <div class="postReceta">
+        <form id="postReceta">
+            <label for="text">Título</label>
+            <input placeholder="Por ejemplo: Pollo al curry" id="titulo" />
+            <label for="text">Descripción</label> <br>
+            <textarea name="descripcion" id="descripcion" max-length="2048" placeholder="1. Añade ... 2. Pon..."
+                rows="5" cols="200"></textarea> <br>
+            <label for="photo">Foto</label>
+            <input placeholder="Pon la URL de la foto" id="foto" />
+            <label for="text">Ingredientes</label> <br>
+            <div>
+                <label>Nombre</label>
+                <input id="new-ingredient-name" type="text" />
+                <label>Cantidad</label>
+                <input id="new-ingredient-amount" type="number" />
+                <label>Unidades</label>
+                <select id="new-ingredient-measure">
+                    <option value="gramos">gr</option>
+                    <option value="litros">l</option>
+                    <option value="mililitros">ml</option>
+                    <option value="kilogramos">kg</option>
+                    <option value="cucharadas">c/s</option>
+                    <option value="cucharaditas">c/c</option>
+                    <option value="pizca">pizca</option>
+                    <option value="taza">taza</option>
+                    <option value="lonchas">lonchas</option>
+                    <option value="unidades">unidades</option>
+                    <option value="unidad">unidad</option>
+                    <option value="dientes">dientes</option>
+                    <option value="diente">diente</option>
+                    <option value="rebanada">rebanada</option>
+                    <option value="rebanadas">rebanadas</option>
+
+                </select>
+                <button id="add-ingredient-button">Añadir</button>
+                <ul class="ingredients"></ul>
+            </div>
+
+
+            <button id="crearReceta" type="submit">Guardar Receta</button>
+        </form>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="add.js"></script>
+
+</body>
+
+</html>

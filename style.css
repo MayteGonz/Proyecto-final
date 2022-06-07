@@ -363,3 +363,14 @@ nav {
     font-size: 25px;
   }
 }
+
+.add-butt {
+  margin-top: 150px;
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  margin-right: 60px;
+}
+.button-add {
+  font-size: 18px;
+}
