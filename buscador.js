@@ -1,7 +1,20 @@
 const form = document.getElementById("buscador");
 form.addEventListener("submit", (e) => {
     e.preventDefault();
+    //alert("clicamos en buscar");
     buscarRecetas(form);
+});
+const buscarButton = document.getElementById("buscarid");
+const form2 = document.getElementById("lupa");
+form2.addEventListener("click", (e) => {
+    e.preventDefault();
+
+
+
+    buscarButton.click();
+
+    //alert("clicamos en la lupa");
+    //buscarRecetas(form);
 });
 
 async function buscarRecetas(form) {

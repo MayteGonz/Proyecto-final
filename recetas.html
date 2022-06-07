@@ -6,8 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/Images/favicon_whirr.png" type="image/x-icon">
+    <link rel="stylesheet" href="w3.css">
     <title>Recetas</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="buscador.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
@@ -35,9 +37,29 @@
 
             <a href="login.html">Entrar</a>
             <button onclick="location.href='registrarse.html'">Registrarse</button>
-
+            <button id="btRequest2">Salir</button>
         </div>
     </nav>
+
+
+    <header>
+        <!-- https://proyecto-final-mayte-nuria.herokuapp.com/api/recetas?filters[titulo][$containsi]=biz -->
+        <div class="box">
+
+            <div class="container-3">
+                <form id="buscador">
+                    <div class="container-3">
+                        <span id="lupa" class="icon"><i class="fa fa-search"></i></span>
+                        <input type="text" name="cadenadebusqueda" id="cadenadebusqueda" placeholder="Buscar Receta..." class="search">
+                        <input type="submit" id="buscarid" value="buscar" style="visibility:hidden;">
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </header>
+
+
     <section class="add-butt">
         <button class="button-add" onclick="location.href='add.html'">Añadir receta</button>
     </section>
@@ -46,16 +68,15 @@
 
         <!-- https://proyecto-final-mayte-nuria.herokuapp.com/api/recetas?filters[titulo][$containsi]=biz -->
 
-        <form id="buscador">
-            <input type="text" name="cadenadebusqueda" id="cadenadebusqueda">
-            <input type="submit" value="buscar">
-
-        </form>
-
-
         <ul id="lista-recetas">
         </ul>
     </section>
+
+    <footer>
+        <div class="w3-container w3-light-green w3-text-dark-grey w3-f w3-center w3-padding-16">
+            <p>Realizado con &#128151 por Mayte y Nuria</p>
+        </div>
+    </footer>
 
     <script src="config.js"></script>
     <script src="recetas.js"></script>
