@@ -32,20 +32,21 @@ function showRecipes(data) {
     const titulo = document.createElement("h2");
     const foto = document.createElement("img");
 
+    a.classList.add("card");
     div.classList.add("contenedor");
+    titulo.classList.add("titulo-receta");
     foto.classList.add("imagen-receta");
-    //https://proyecto-final-mayte-nuria.herokuapp.com/api
+
     a.href = "recetas-id.html?idreceta=" + receta.id;
     foto.src = receta.attributes.foto;
     titulo.textContent = receta.attributes.titulo;
 
-    div.appendChild(foto);
     div.appendChild(titulo);
+    div.appendChild(foto);
     a.appendChild(div);
     listRecipes.appendChild(a);
   }
 }
-
 
 function showRecipesMoreInfo(data) {
   const listRecipes = document.getElementById("lista-recetas");
@@ -83,4 +84,13 @@ function showRecipesMoreInfo(data) {
     div.appendChild(descripcion);
     listRecipes.appendChild(div);
   }
+}
+const borrar = document.getElementById("btRequest2");
+borrar.addEventListener("click", () => {
+  deleteData();
+});
+
+function deleteData() {
+  localStorage.removeItem("jwt");
+  window.location.href = "recetas.html";
 }
