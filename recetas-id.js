@@ -4,7 +4,6 @@ async function requestRecipe() {
   try {
     const urlParams = new URLSearchParams(window.location.search);
     const id = urlParams.get("idreceta");
-    console.log(id);
     const response = await fetch(`${url}/recetas/` + id + `?populate=*`);
 
     if (!response.ok) {
@@ -14,35 +13,17 @@ async function requestRecipe() {
     const recipeResponse = await response.json();
     console.log(recipeResponse);
 
-
-
     showRecipesMoreInfo(recipeResponse.data);
   } catch (error) {
     console.log(error);
   }
 }
 
-
-
 function showRecipesMoreInfo(data) {
-
-  console.log("chahco loco mira ver entra aqui");
-  console.log(data);
-
-
   const listRecipes = document.getElementById("lista-recetas");
-  listRecipes.innerHTML = "MAITEEEEEEE";
-
+  listRecipes.innerHTML = "";
 
   receta = data;
-
-
-
-  // for (const receta of data) {
-
-  console.log("--------------------------------------------");
-  console.log(data[receta]);
-
 
   const div = document.createElement("div");
   const titulo = document.createElement("h2");
@@ -70,25 +51,18 @@ function showRecipesMoreInfo(data) {
   descripcion.textContent = receta.attributes.descripcion;
   descripcion.innerHTML = descripcion.innerHTML.replaceAll("\n", "<br/>");
 
-  div.appendChild(foto);
   div.appendChild(titulo);
+  div.appendChild(foto);
   div.appendChild(ingredientes);
   div.appendChild(descripcion);
   listRecipes.appendChild(div);
-
-
-
-
-
-
-
-
 }
+const borrar = document.getElementById("btRequest2");
+borrar.addEventListener("click", () => {
+  deleteData();
+});
 
-
-
-
-
-
-
-
+function deleteData() {
+  localStorage.removeItem("jwt");
+  window.location.href = "recetas.html";
+}

@@ -270,23 +270,6 @@ nav {
   flex-direction: column;
 }
 
-.lista-recetas {
-  margin-top: 200px;
-}
-
-.contenedor {
-  display: flex;
-  flex-wrap: wrap;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-}
-
-.imagen-receta {
-  float: left;
-  width: 400px;
-  height: auto;
-}
-
 /* nuevo */
 .seccion-dos {
   background-color: rgb(255, 255, 255);
@@ -377,18 +360,6 @@ nav {
   }
 }
 
-.add-butt {
-  margin-top: 150px;
-  display: flex;
-  flex-direction: row-reverse;
-  flex-wrap: wrap;
-  margin-right: 60px;
-}
-
-.button-add {
-  font-size: 18px;
-}
-
 /* prueba */
 /*Small screens - tablets*/
 @media screen and (max-width: 768px) {
@@ -407,9 +378,7 @@ nav {
     padding-bottom: 0px;
     padding-right: 0px;
     width: 150px;
-    ;
     clear: right;
-
   }
 
   .menu-links a {
@@ -421,9 +390,7 @@ nav {
     padding-bottom: 5px;
     padding-right: 0px;
     width: 150px;
-    ;
     clear: right;
-
   }
 
   .menu-links a:hover {
@@ -433,5 +400,4 @@ nav {
   .subrayado {
     border-bottom: none;
   }
-
 }
