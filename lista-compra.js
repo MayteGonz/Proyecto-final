@@ -62,7 +62,7 @@ function addItem(e) {
     // append child
     list.appendChild(element);
     // display alert
-    displayAlert("item added to the list", "success");
+    displayAlert("Ingrediente añadido", "success");
     // show container
     container.classList.add("show-container");
     // set local storage
@@ -71,13 +71,13 @@ function addItem(e) {
     setBackToDefault();
   } else if (value !== "" && editFlag) {
     editElement.innerHTML = value;
-    displayAlert("value changed", "success");
+    displayAlert("ingrediente modificado", "success");
 
     // edit  local storage
     editLocalStorage(editID, value);
     setBackToDefault();
   } else {
-    displayAlert("please enter value", "danger");
+    displayAlert("por favor añade el ingrediente", "danger");
   }
 }
 // display alert
@@ -116,7 +116,7 @@ function deleteItem(e) {
   if (list.children.length === 0) {
     container.classList.remove("show-container");
   }
-  displayAlert("item removed", "danger");
+  displayAlert("ingrediente borrado", "danger");
 
   setBackToDefault();
   // remove from local storage
@@ -132,7 +132,7 @@ function editItem(e) {
   editFlag = true;
   editID = element.dataset.id;
   //
-  submitBtn.textContent = "edit";
+  submitBtn.textContent = "editar";
 }
 // set backt to defaults
 function setBackToDefault() {
