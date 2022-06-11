@@ -33,9 +33,9 @@ function showRecipes(data) {
     const foto = document.createElement("img");
 
     a.classList.add("card");
-    div.classList.add("contenedor");
-    titulo.classList.add("titulo-receta");
-    foto.classList.add("imagen-receta");
+    div.classList.add("cont-recipe");
+    titulo.classList.add("card-title");
+    foto.classList.add("card-img-bottom");
 
     a.href = "recetas-id.html?idreceta=" + receta.id;
     foto.src = receta.attributes.foto;
