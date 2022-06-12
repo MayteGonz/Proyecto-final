@@ -3,6 +3,9 @@ window.onload = () => {
   const addIngredientButton = document.getElementById("add-ingredient-button");
   const ingredientsContainer = document.querySelector(".ingredients");
 
+  ingredientsContainer.classList.add("ingredientsContainer");
+  addIngredientButton.classList.add("button-");
+
   if (!ingredientsContainer) {
     throw new Error("Ingredients container not found");
   }
@@ -11,10 +14,13 @@ window.onload = () => {
     const ingredientContainer = document.createElement("li");
 
     const ingredientText = document.createElement("p");
-    ingredientText.innerHTML = `${ingredient.nombre} - ${ingredient.cantidad} ${ingredient.Unidades}`;
+    ingredientText.innerHTML = `${ingredient.cantidad} ${ingredient.Unidades}  de ${ingredient.nombre}   `;
 
     const ingredientRemovalButton = document.createElement("button");
-    ingredientRemovalButton.innerHTML = "-";
+    ingredientRemovalButton.innerHTML = "";
+
+    ingredientContainer.classList.add("ingredientContainer");
+    ingredientRemovalButton.classList.add("btn-close");
 
     ingredientRemovalButton.addEventListener("click", () => {
       ingredientContainer.remove();
@@ -41,19 +47,19 @@ window.onload = () => {
     if (ingredientNameInput) {
       nombre = ingredientNameInput.value;
     } else {
-      throw new Error("Cant find ingredient name");
+      throw new Error("Añade un ingrediente");
     }
 
     if (ingredientAmountInput) {
       cantidad = ingredientAmountInput.value;
     } else {
-      throw new Error("Cant find ingredient amount");
+      throw new Error("Añade una cantidad");
     }
 
     if (ingredientMeasureInput) {
       Unidades = ingredientMeasureInput.value;
     } else {
-      throw new Error("Cant find ingredient measure");
+      throw new Error("Elige una unidad");
     }
 
     if (!nombre || cantidad === undefined || !Unidades) {

@@ -100,7 +100,7 @@ function clearItems() {
     });
   }
   container.classList.remove("show-container");
-  displayAlert("empty list", "danger");
+  displayAlert("Lita borrada", "danger");
   setBackToDefault();
   localStorage.removeItem("list");
 }

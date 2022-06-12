@@ -27,17 +27,23 @@ function showRecipesMoreInfo(data) {
 
   const div = document.createElement("div");
   const titulo = document.createElement("h2");
+  const divSup = document.createElement("div");
   const foto = document.createElement("img");
+  const allingredientes = document.createElement("div");
   const titleingredientes = document.createElement("h4");
   const ingredientes = document.createElement("ul");
+  const alldescripcion = document.createElement("div");
   const titledescripcion = document.createElement("h4");
   const descripcion = document.createElement("p");
 
   div.classList.add("compl-receta");
   titulo.classList.add("tit-receta");
   foto.classList.add("img-receta");
+  divSup.classList.add("div-sup");
+  allingredientes.classList.add("div-ingredientes");
   titleingredientes.classList.add("tit-ingr");
   ingredientes.classList.add("ingre-receta");
+  alldescripcion.classList.add("div-description");
   descripcion.classList.add("des-receta");
   titledescripcion.classList.add("tit-desc");
 
@@ -60,11 +66,14 @@ function showRecipesMoreInfo(data) {
   descripcion.innerHTML = descripcion.innerHTML.replaceAll("\n", "<br/>");
 
   div.appendChild(titulo);
-  div.appendChild(foto);
-  div.appendChild(titleingredientes);
-  div.appendChild(ingredientes);
-  div.appendChild(titledescripcion);
-  div.appendChild(descripcion);
+  divSup.appendChild(foto);
+  allingredientes.appendChild(titleingredientes);
+  allingredientes.appendChild(ingredientes);
+  divSup.appendChild(allingredientes);
+  div.appendChild(divSup);
+  alldescripcion.appendChild(titledescripcion);
+  alldescripcion.appendChild(descripcion);
+  div.appendChild(alldescripcion);
   listRecipes.appendChild(div);
 }
 const borrar = document.getElementById("btRequest2");

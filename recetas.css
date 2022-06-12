@@ -113,12 +113,12 @@
 }
 .img-receta {
   width: 33.3333333333%;
-  height: 320px;
+  height: auto;
   min-height: 200px;
   margin: 0;
   padding: 0;
   border: none;
-  background-size: contain;
+  object-fit: contain;
   background-position: center center;
   display: block;
   float: left;
@@ -130,14 +130,112 @@
   font-size: 36px;
   text-shadow: cadetblue;
 }
-.tit-ingr {
-  margin-left: 600px;
-}
-.ingre-receta {
+.div-ingredientes {
   list-style: circle;
-  margin-left: 600px;
   margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-around;
+  max-width: 700px;
+  overflow-wrap: break-word;
+  max-height: fit-content;
 }
-.tit-desc {
-  margin-top: 110px;
+
+.div-description {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.div-sup {
+  min-height: 300px;
+}
+
+@media screen and (max-width: 1300px) {
+  .img-receta {
+    width: 40%;
+    height: auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .div-sup {
+    display: flex;
+    flex-direction: column;
+  }
+  .img-receta {
+    width: 100%;
+    height: auto;
+  }
+  .div-ingredientes {
+    align-content: flex-start;
+  }
+}
+
+/*Extra small screens - phones*/
+@media screen and (max-width: 480px) {
+  .div-sup {
+    display: flex;
+    flex-direction: column;
+  }
+  .img-receta {
+    width: 100%;
+    height: auto;
+  }
+  .div-ingredientes {
+    align-content: flex-start;
+  }
+}
+
+/*Add receta */
+.mb-3 {
+  margin-top: 200px;
+  margin-left: 300px;
+  margin-right: 300px;
+}
+.button-añadir {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+.save-recipe {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.btn-close {
+  margin-left: 10px;
+}
+.ingredientContainer {
+  display: flex;
+  align-items: flex-start;
+}
+.ingredientsContainer {
+  margin-top: 20px;
+}
+.btn-añadir {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  border: 1px solid #3dc2e3;
+  background-color: #3dc2e3;
+  border-radius: 0.9em;
+  padding: 0.6em 1em 0.6em 0.8em;
+  transition: all ease-in-out 0.2s;
+}
+.btn-añadir:hover {
+  background-color: rgb(0, 204, 255);
+}
+.btn-guardar {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  border: 1px solid #3dc2e3;
+  background-color: #3dc2e3;
+  border-radius: 0.9em;
+  padding: 0.7em 1.1em 0.7em 0.9em;
+  transition: all ease-in-out 0.2s;
+}
+.btn-guardar:hover {
+  background-color: rgb(0, 204, 255);
 }
