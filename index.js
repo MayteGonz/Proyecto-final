@@ -30,7 +30,7 @@ function loadGallery() {
   rightView.style.background = "url(" + imgObject[nextImg] + ")";
 
   let linkTag = document.getElementById("linkTag");
-  linkTag.href = imgObject[mainImg];
+  linkTag.href = "recetas.html";
 }
 
 function scrollRight() {

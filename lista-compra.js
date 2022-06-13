@@ -132,7 +132,7 @@ function editItem(e) {
   editFlag = true;
   editID = element.dataset.id;
   //
-  submitBtn.textContent = "editar";
+  submitBtn.textContent = "Editar";
 }
 // set backt to defaults
 function setBackToDefault() {

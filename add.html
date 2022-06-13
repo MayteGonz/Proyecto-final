@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="/Images/favicon_whirr.png" type="image/x-icon">
     <title>Recetas</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style-2.css">
+    <link rel="stylesheet" href="recetas.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
@@ -42,50 +42,55 @@
 
         </div>
     </nav>
-    <div class="postReceta">
+    <div class="mb-3">
         <form id="postReceta">
-            <label for="text">Título</label>
-            <input placeholder="Por ejemplo: Pollo al curry" id="titulo" />
-            <label for="text">Descripción</label> <br>
-            <textarea name="descripcion" id="descripcion" max-length="2048" placeholder="1. Añade ... 2. Pon..."
-                rows="5" cols="200"></textarea> <br>
-            <label for="photo">Foto</label>
-            <input placeholder="Pon la URL de la foto" id="foto" />
-            <label for="text">Ingredientes</label> <br>
-            <div>
-                <label>Nombre</label>
-                <input id="new-ingredient-name" type="text" />
-                <label>Cantidad</label>
-                <input id="new-ingredient-amount" type="number" />
-                <label>Unidades</label>
-                <select id="new-ingredient-measure">
-                    <option value="gramos">gr</option>
-                    <option value="litros">l</option>
-                    <option value="mililitros">ml</option>
-                    <option value="kilogramos">kg</option>
-                    <option value="cucharadas">c/s</option>
-                    <option value="cucharaditas">c/c</option>
-                    <option value="pizca">pizca</option>
-                    <option value="taza">taza</option>
-                    <option value="lonchas">lonchas</option>
-                    <option value="unidades">unidades</option>
-                    <option value="unidad">unidad</option>
-                    <option value="dientes">dientes</option>
-                    <option value="diente">diente</option>
-                    <option value="rebanada">rebanada</option>
-                    <option value="rebanadas">rebanadas</option>
-                    <option value="ramita">ramita</option>
-                    <option value="ramitas">ramitas</option>
-                    <option value="hoja">hoja</option>
-                    <option value="hojas">hojas</option>
+            <label style="font-size: 20px;" for="text" class="form-label">Título</label>
+            <input class="form-control" placeholder="Por ejemplo: Pollo al curry" id="titulo" />
+            <label style="font-size: 20px;" for="text" class="form-label">Descripción</label> <br>
+            <textarea class="form-control" name="descripcion" id="descripcion" max-length="2048"
+                placeholder="1. Añade ... 2. Pon..." rows="5" cols="200"></textarea> <br>
+            <label style="font-size: 20px;" for="photo" class="form-label">URL con la foto de la receta </label>
+            <input class="form-control" placeholder="Ejemplo:  https://www.ejemplo.com" id="foto" />
 
-                </select>
-                <button id="add-ingredient-button">Añadir</button>
-                <ul class="ingredients"></ul>
+            <div class="addIngredientesList">
+                <label style="font-size: 20px;" class="form-label" for="text">Ingredientes</label> <br>
+                <label for="text" class="form-label">Nombre</label>
+                <input class="form-control" placeholder="Por ejemplo: pollo" id="new-ingredient-name" type="text" />
+                <labelfor="text" class="form-label">Cantidad</label>
+                    <input class="form-control" placeholder="Por ejemplo: 20" id="new-ingredient-amount"
+                        type="number" />
+                    <label>Unidades</label>
+                    <select class="form-select" aria-label="Default select example" id="new-ingredient-measure">
+                        <option selected>Elige las unidades</option>
+                        <option value="gramos">gr</option>
+                        <option value="litros">l</option>
+                        <option value="mililitros">ml</option>
+                        <option value="kilogramos">kg</option>
+                        <option value="cucharadas">c/s</option>
+                        <option value="cucharaditas">c/c</option>
+                        <option value="pizca">pizca</option>
+                        <option value="taza">taza</option>
+                        <option value="lonchas">lonchas</option>
+                        <option value="unidades">unidades</option>
+                        <option value="unidad">unidad</option>
+                        <option value="dientes">dientes</option>
+                        <option value="diente">diente</option>
+                        <option value="rebanada">rebanada</option>
+                        <option value="rebanadas">rebanadas</option>
+                        <option value="ramita">ramita</option>
+                        <option value="ramitas">ramitas</option>
+                        <option value="hoja">hoja</option>
+                        <option value="hojas">hojas</option>
+
+                    </select>
+                    <div class="button-añadir">
+                        <button class="btn-añadir" id="add-ingredient-button">Añadir Ingrediente</button>
+                    </div>
+                    <ul class="ingredients"></ul>
             </div>
-
-
-            <button id="crearReceta" type="submit">Guardar Receta</button>
+            <div class="save-recipe">
+                <button id="crearReceta" type="submit" class="btn-guardar">Guardar Receta</button>
+            </div>
         </form>
     </div>
 
