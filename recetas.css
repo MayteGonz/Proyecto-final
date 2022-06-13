@@ -100,7 +100,7 @@
   }
 }
 .container {
-  margin-top: 180px;
+  margin-top: 10px;
   max-width: 300px;
   overflow: hidden;
   transition: max-width 3s;
@@ -238,4 +238,27 @@
 }
 .btn-guardar:hover {
   background-color: rgb(0, 204, 255);
+}
+
+.eliminar-receta {
+  margin-bottom: 10px;
+  font-size: 14px;
+  border: 1px solid #3dc2e3;
+  background-color: #3dc2e3;
+  border-radius: 0.9em;
+  padding: 0.6em 1em 0.6em 0.8em;
+  transition: all ease-in-out 0.2s;
+  margin-top: 160px;
+}
+.divBtnDelete {
+  display: flex;
+  justify-content: flex-end;
+  align-content: flex-end;
+  flex-wrap: wrap;
+}
+.div-cont {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-around;
 }

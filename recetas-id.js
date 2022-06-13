@@ -85,3 +85,30 @@ function deleteData() {
   localStorage.removeItem("jwt");
   window.location.href = "recetas.html";
 }
+
+/* Borrar receta*/
+
+const btnDelete = document.getElementById("btnDelete");
+btnDelete.addEventListener("click", () => {
+  borrarReceta();
+});
+async function borrarReceta() {
+  try {
+    const token = localStorage.getItem("jwt");
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = urlParams.get("idreceta");
+    const response = await fetch(`${url}/recetas/` + id, {
+      method: "DELETE",
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+
+    if (!response.ok) {
+      const message = `Error: ${response.status}`;
+      throw new Error(message);
+    }
+  } catch (error) {
+    console.log(error);
+  }
+}
