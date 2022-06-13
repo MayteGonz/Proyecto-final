@@ -100,7 +100,7 @@ function clearItems() {
     });
   }
   container.classList.remove("show-container");
-  displayAlert("empty list", "danger");
+  displayAlert("Lista Vaciada", "danger");
   setBackToDefault();
   localStorage.removeItem("list");
 }
@@ -139,7 +139,7 @@ function setBackToDefault() {
   grocery.value = "";
   editFlag = false;
   editID = "";
-  submitBtn.textContent = "submit";
+  submitBtn.textContent = "Añadir";
 }
 
 // ****** local storage **********
