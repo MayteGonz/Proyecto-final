@@ -36,9 +36,9 @@
         </div>
 
         <div class="log-in">
-            <p id="nameUser"></p>
             <a id="btnLogin" href="login.html">Entrar</a>
             <button id="btnLogup" onclick="location.href='registrarse.html'">Registrarse</button>
+            <p class="name-user" id="nameUser"></p>
             <button id="btRequest2">Salir</button>
         </div>
     </nav>
@@ -51,15 +51,20 @@
                 placeholder="1. Añade ... 2. Pon..." rows="5" cols="200"></textarea> <br>
             <label style="font-size: 20px;" for="photo" class="form-label">URL con la foto de la receta </label>
             <input class="form-control" placeholder="Ejemplo:  https://www.ejemplo.com" id="foto" />
-
+            <label style="font-size: 20px;" class="form-label" for="text">Ingredientes</label>
             <div class="addIngredientesList">
                 <form id="addIngredient">
-                    <label style="font-size: 20px;" class="form-label" for="text">Ingredientes</label> <br>
-                    <label for="text" class="form-label">Nombre</label>
-                    <input class="form-control" placeholder="Por ejemplo: pollo" id="new-ingredient-name" type="text" />
-                    <labelfor="text" class="form-label">Cantidad</label>
+                    <div class="cuadroIngr">
+                        <label for="text" class="form-label">Nombre</label>
+                        <input class="form-control" placeholder="Por ejemplo: pollo" id="new-ingredient-name"
+                            type="text" />
+                    </div>
+                    <div class="cuadroIngr">
+                        <label for="text" class="form-label">Cantidad</label>
                         <input class="form-control" placeholder="Por ejemplo: 20" id="new-ingredient-amount"
                             type="number" />
+                    </div>
+                    <div class="cuadroIngr">
                         <label>Unidades</label>
                         <select class="form-select" aria-label="Default select example" id="new-ingredient-measure">
                             <option selected>Elige las unidades</option>
@@ -84,12 +89,13 @@
                             <option value="hojas">hojas</option>
 
                         </select>
+                    </div>
                 </form>
                 <div class="button-añadir">
-                    <button class="btn-añadir" id="add-ingredient-button">Añadir Ingrediente</button>
+                    <button class="btn-añadir" id="add-ingredient-button">+</button>
                 </div>
-                <ul class="ingredients"></ul>
             </div>
+            <ul class="ingredients"></ul>
             <div class="save-recipe">
                 <button id="crearReceta" type="submit" class="btn-guardar">Guardar Receta</button>
             </div>

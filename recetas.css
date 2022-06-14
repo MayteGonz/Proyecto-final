@@ -178,10 +178,9 @@
 }
 .ingredientsContainer {
   margin-top: 20px;
+  list-style-type: square;
 }
 .btn-añadir {
-  margin-top: 10px;
-  margin-bottom: 10px;
   font-size: 14px;
   border: 1px solid #3dc2e3;
   background-color: #3dc2e3;
@@ -227,4 +226,22 @@
   flex-direction: column;
   flex-wrap: wrap;
   align-content: space-around;
+}
+.addIngredientesList {
+  display: flex;
+  align-items: center;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.form-label {
+  margin-top: 30px;
+}
+
+.cuadroIngr {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 10px;
+  width: 100%;
 }

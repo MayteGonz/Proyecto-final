@@ -401,3 +401,9 @@ nav {
     border-bottom: none;
   }
 }
+.name-user {
+  color: black;
+  margin-bottom: 5px;
+  text-align: start;
+  padding-right: 70px;
+}

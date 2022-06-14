@@ -2,7 +2,6 @@ const form = document.getElementById("form");
 
 const loginError = document.getElementById("login-error");
 
-
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   sendData(form);
@@ -26,9 +25,7 @@ async function sendData(form) {
     const users = await response.json();
     showData(users);
   } catch (error) {
-    //alert("Error al iniciar sesión");
     loginError.innerText = "Error al iniciar sesión";
-    console.log("chachoooo el error muchacho");
     console.log(error);
   }
 }

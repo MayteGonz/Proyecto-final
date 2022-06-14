@@ -2,9 +2,7 @@ hideBtnSup();
 const ingredients = [];
 
 const ingredientNameInput = document.getElementById("new-ingredient-name");
-const ingredientAmountInput = document.getElementById(
-  "new-ingredient-amount"
-);
+const ingredientAmountInput = document.getElementById("new-ingredient-amount");
 const ingredientMeasureInput = document.getElementById(
   "new-ingredient-measure"
 );
@@ -46,7 +44,6 @@ const createIngredientItem = (data) => {
 addIngredientButton.addEventListener("click", (e) => {
   e.preventDefault();
 
-
   let nombre, cantidad, Unidades;
 
   if (ingredientNameInput) {
@@ -72,10 +69,6 @@ addIngredientButton.addEventListener("click", (e) => {
   }
   const ingredient = { nombre, cantidad, Unidades };
   añadirIngrediente(ingredient);
-
-
-
-
 });
 
 const createRecipeButton = document.getElementById("crearReceta");
@@ -120,10 +113,8 @@ createRecipeButton.addEventListener("click", async (e) => {
     console.log(data);
 
     location.href = "recetas.html";
-    //fUNCION QUE MUESTRE LO QUE ACABO DE PONER O REDIRECCIONE HACIA ATRAS MOSTRANDO UN MENSAJE DE GUARDADO
   } catch (error) {
     console.log(error);
-    //Mostrar error al usuario mediante css o js
   }
 });
 
@@ -152,13 +143,9 @@ async function añadirIngrediente(ingredient) {
     ingredients.push(data.data.id);
     ingredientsContainer.appendChild(createIngredientItem(data));
 
-
-
     ingredientNameInput.value = "";
     ingredientAmountInput.value = "";
     ingredientMeasureInput.value = "";
-
-
   } catch (error) {
     console.log(error);
   }
