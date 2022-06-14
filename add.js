@@ -78,7 +78,7 @@ createRecipeButton.addEventListener("click", async (e) => {
   const tituloReceta = document.getElementById("titulo");
   const descripcionReceta = document.getElementById("descripcion");
   const fotoReceta = document.getElementById("foto");
-  const ingredientesReceta = document.getElementById("ingredientes");
+  const idUser = localStorage.getItem("id");
 
   var raw = JSON.stringify({
     data: {
@@ -86,6 +86,7 @@ createRecipeButton.addEventListener("click", async (e) => {
       descripcion: descripcionReceta.value,
       foto: fotoReceta.value,
       ingredientes: ingredients,
+      user: idUser,
     },
   });
 
