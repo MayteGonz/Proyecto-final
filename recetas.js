@@ -6,7 +6,14 @@
 //--> const url= "http://localhost:1337/api" o la del remoto
 
 requestRecipes();
-
+hideBtn();
+hideBtnSup();
+function hideBtn() {
+  const token = localStorage.getItem("jwt");
+  if (!token) {
+    document.getElementById("addRecipeBtn").style.visibility = "hidden";
+  }
+}
 async function requestRecipes() {
   try {
     const response = await fetch(`${url}/recetas?populate=*`);

@@ -1,4 +1,13 @@
 requestRecipe();
+hideBtnDelete();
+hideBtnSup();
+
+function hideBtnDelete() {
+  const token = localStorage.getItem("jwt");
+  if (!token) {
+    document.getElementById("btnDelete").style.visibility = "hidden";
+  }
+}
 
 async function requestRecipe() {
   try {
@@ -90,8 +99,12 @@ function deleteData() {
 
 const btnDelete = document.getElementById("btnDelete");
 btnDelete.addEventListener("click", () => {
-  borrarReceta();
+  var result = confirm("¿Seguro que quieres eliminar la receta?");
+  if (result) {
+    borrarReceta();
+  }
 });
+
 async function borrarReceta() {
   try {
     const token = localStorage.getItem("jwt");
@@ -107,6 +120,8 @@ async function borrarReceta() {
     if (!response.ok) {
       const message = `Error: ${response.status}`;
       throw new Error(message);
+    } else {
+      location.href = "recetas.html";
     }
   } catch (error) {
     console.log(error);

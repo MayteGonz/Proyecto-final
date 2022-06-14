@@ -14,6 +14,21 @@ function isTokenExpired() {
 
 function logout() {
   localStorage.removeItem("jwt");
+  localStorage.removeItem("name");
+  localStorage.removeItem("id");
+
   window.location.href = "login.html";
 }
 const url = "https://proyecto-final-mayte-nuria.herokuapp.com/api";
+
+function hideBtnSup() {
+  const token = localStorage.getItem("jwt");
+  const name = localStorage.getItem("name");
+  if (token) {
+    document.getElementById("btnLogin").style.display = "none";
+    document.getElementById("btnLogup").style.display = "none";
+    document.getElementById("nameUser").textContent = "Hola " + name;
+  } else {
+    document.getElementById("btRequest2").style.display = "none";
+  }
+}

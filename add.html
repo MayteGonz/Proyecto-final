@@ -36,10 +36,10 @@
         </div>
 
         <div class="log-in">
-
-            <a href="login.html">Entrar</a>
-            <button onclick="location.href='registrarse.html'">Registrarse</button>
-
+            <p id="nameUser"></p>
+            <a id="btnLogin" href="login.html">Entrar</a>
+            <button id="btnLogup" onclick="location.href='registrarse.html'">Registrarse</button>
+            <button id="btRequest2">Salir</button>
         </div>
     </nav>
     <div class="mb-3">
@@ -53,40 +53,42 @@
             <input class="form-control" placeholder="Ejemplo:  https://www.ejemplo.com" id="foto" />
 
             <div class="addIngredientesList">
-                <label style="font-size: 20px;" class="form-label" for="text">Ingredientes</label> <br>
-                <label for="text" class="form-label">Nombre</label>
-                <input class="form-control" placeholder="Por ejemplo: pollo" id="new-ingredient-name" type="text" />
-                <labelfor="text" class="form-label">Cantidad</label>
-                    <input class="form-control" placeholder="Por ejemplo: 20" id="new-ingredient-amount"
-                        type="number" />
-                    <label>Unidades</label>
-                    <select class="form-select" aria-label="Default select example" id="new-ingredient-measure">
-                        <option selected>Elige las unidades</option>
-                        <option value="gramos">gr</option>
-                        <option value="litros">l</option>
-                        <option value="mililitros">ml</option>
-                        <option value="kilogramos">kg</option>
-                        <option value="cucharadas">c/s</option>
-                        <option value="cucharaditas">c/c</option>
-                        <option value="pizca">pizca</option>
-                        <option value="taza">taza</option>
-                        <option value="lonchas">lonchas</option>
-                        <option value="unidades">unidades</option>
-                        <option value="unidad">unidad</option>
-                        <option value="dientes">dientes</option>
-                        <option value="diente">diente</option>
-                        <option value="rebanada">rebanada</option>
-                        <option value="rebanadas">rebanadas</option>
-                        <option value="ramita">ramita</option>
-                        <option value="ramitas">ramitas</option>
-                        <option value="hoja">hoja</option>
-                        <option value="hojas">hojas</option>
+                <form id="addIngredient">
+                    <label style="font-size: 20px;" class="form-label" for="text">Ingredientes</label> <br>
+                    <label for="text" class="form-label">Nombre</label>
+                    <input class="form-control" placeholder="Por ejemplo: pollo" id="new-ingredient-name" type="text" />
+                    <labelfor="text" class="form-label">Cantidad</label>
+                        <input class="form-control" placeholder="Por ejemplo: 20" id="new-ingredient-amount"
+                            type="number" />
+                        <label>Unidades</label>
+                        <select class="form-select" aria-label="Default select example" id="new-ingredient-measure">
+                            <option selected>Elige las unidades</option>
+                            <option value="gr">gr</option>
+                            <option value="l">l</option>
+                            <option value="ml">ml</option>
+                            <option value="kg">kg</option>
+                            <option value="c/s">c/s</option>
+                            <option value="c/c">c/c</option>
+                            <option value="pizca">pizca</option>
+                            <option value="taza">taza</option>
+                            <option value="lonchas">lonchas</option>
+                            <option value="unidades">unidades</option>
+                            <option value="unidad">unidad</option>
+                            <option value="dientes">dientes</option>
+                            <option value="diente">diente</option>
+                            <option value="rebanada">rebanada</option>
+                            <option value="rebanadas">rebanadas</option>
+                            <option value="ramita">ramita</option>
+                            <option value="ramitas">ramitas</option>
+                            <option value="hoja">hoja</option>
+                            <option value="hojas">hojas</option>
 
-                    </select>
-                    <div class="button-añadir">
-                        <button class="btn-añadir" id="add-ingredient-button">Añadir Ingrediente</button>
-                    </div>
-                    <ul class="ingredients"></ul>
+                        </select>
+                </form>
+                <div class="button-añadir">
+                    <button class="btn-añadir" id="add-ingredient-button">Añadir Ingrediente</button>
+                </div>
+                <ul class="ingredients"></ul>
             </div>
             <div class="save-recipe">
                 <button id="crearReceta" type="submit" class="btn-guardar">Guardar Receta</button>

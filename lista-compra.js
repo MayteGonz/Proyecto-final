@@ -1,3 +1,4 @@
+hideBtnSup();
 const borrar = document.getElementById("btRequest2");
 borrar.addEventListener("click", () => {
   deleteData();

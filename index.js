@@ -1,3 +1,4 @@
+hideBtnSup();
 let imgObject = [
   "/images/aperitivos.jpg",
   "/images/burritos.jpg",

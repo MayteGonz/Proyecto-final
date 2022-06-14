@@ -28,6 +28,9 @@ async function sendData(form) {
 
 function showData(users) {
   localStorage.setItem("jwt", users.jwt);
+  localStorage.setItem("id", users.user.id);
+  localStorage.setItem("name", users.user.name);
+
   window.location.href = "/index.html";
 }
 
