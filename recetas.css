@@ -72,13 +72,14 @@
   color: #190f00;
 }
 .img-receta {
-  width: 30%;
+  width: 40%;
   height: auto;
+  max-height: 300px;
   min-height: 200px;
   margin: 0;
   padding: 0;
   border: none;
-  object-fit: contain;
+  object-fit: cover;
   background-position: center center;
   display: block;
   float: left;
@@ -93,6 +94,7 @@
 .div-ingredientes {
   list-style: circle;
   margin-top: 15px;
+  margin-left: 48px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -108,7 +110,11 @@
   flex-wrap: wrap;
 }
 .div-sup {
-  min-height: 300px;
+  min-height: 324px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 @media screen and (max-width: 1300px) {

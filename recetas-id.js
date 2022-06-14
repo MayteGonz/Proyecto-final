@@ -1,7 +1,6 @@
-requestRecipe();
 hideBtnDelete();
 hideBtnSup();
-
+requestRecipe();
 function hideBtnDelete() {
   const token = localStorage.getItem("jwt");
   if (!token) {

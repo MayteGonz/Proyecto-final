@@ -4,10 +4,10 @@
 // http://localhost:1337/api
 
 //--> const url= "http://localhost:1337/api" o la del remoto
-
-requestRecipes();
 hideBtn();
 hideBtnSup();
+requestRecipes();
+
 function hideBtn() {
   const token = localStorage.getItem("jwt");
   if (!token) {
