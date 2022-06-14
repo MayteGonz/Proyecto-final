@@ -1,6 +1,14 @@
 hideBtnSup();
 const ingredients = [];
 
+const ingredientNameInput = document.getElementById("new-ingredient-name");
+const ingredientAmountInput = document.getElementById(
+  "new-ingredient-amount"
+);
+const ingredientMeasureInput = document.getElementById(
+  "new-ingredient-measure"
+);
+
 const addIngredientButton = document.getElementById("add-ingredient-button");
 const ingredientsContainer = document.querySelector(".ingredients");
 
@@ -37,13 +45,7 @@ const createIngredientItem = (data) => {
 
 addIngredientButton.addEventListener("click", (e) => {
   e.preventDefault();
-  const ingredientNameInput = document.getElementById("new-ingredient-name");
-  const ingredientAmountInput = document.getElementById(
-    "new-ingredient-amount"
-  );
-  const ingredientMeasureInput = document.getElementById(
-    "new-ingredient-measure"
-  );
+
 
   let nombre, cantidad, Unidades;
 
@@ -70,6 +72,10 @@ addIngredientButton.addEventListener("click", (e) => {
   }
   const ingredient = { nombre, cantidad, Unidades };
   añadirIngrediente(ingredient);
+
+
+
+
 });
 
 const createRecipeButton = document.getElementById("crearReceta");
@@ -145,6 +151,14 @@ async function añadirIngrediente(ingredient) {
 
     ingredients.push(data.data.id);
     ingredientsContainer.appendChild(createIngredientItem(data));
+
+
+
+    ingredientNameInput.value = "";
+    ingredientAmountInput.value = "";
+    ingredientMeasureInput.value = "";
+
+
   } catch (error) {
     console.log(error);
   }

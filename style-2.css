@@ -2,12 +2,14 @@
   font-family: "Montserrat", sans-serif !important;
   text-align: center;
 }
+
 .form-landing {
   position: absolute;
   top: 48%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 .back-cont {
   background-color: #f1f1f1;
   width: 700px;
@@ -15,6 +17,7 @@
   margin: 0 auto;
   border-radius: 48px;
 }
+
 .cont-login,
 .cont-reg {
   margin: 0 auto;
@@ -33,11 +36,13 @@ input {
   border-radius: 5px;
   border-color: #4ce3f7;
 }
+
 .cont-button {
   padding-bottom: 20px;
   display: flex;
   flex-direction: column;
 }
+
 .button1 {
   border: none;
   color: #fff;
@@ -49,12 +54,14 @@ input {
   padding: 12px;
   margin-top: 12px;
 }
+
 .button1:hover {
   background-position: right center;
   background-size: 200% auto;
   -webkit-animation: pulse 2s infinite;
   animation: pulse512 1.5s infinite;
 }
+
 @keyframes pulse512 {
   0% {
     box-shadow: 0 0 0 0 #05bada66;
@@ -81,9 +88,16 @@ input {
   padding: 12px;
   margin-top: 12px;
 }
+
 .button2:hover {
   background-position: right center;
   background-size: 200% auto;
   -webkit-animation: pulse 2s infinite;
   animation: pulse512 1.5s infinite;
+}
+
+.error-messages {
+  color: red;
+  text-align: center;
+  font-size: 15px;
 }
